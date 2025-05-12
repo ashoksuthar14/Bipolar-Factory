@@ -10,7 +10,7 @@ st.markdown("Upload an image of a flying object (drone, plane, etc.) and detect 
 @st.cache_resource
 def get_model():
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = load_model("model/efficientnet_yolo.pt", device=device)
+    model = load_model("efficientnet_yolo.pt", device=device)
     return model, device
 
 model, device = get_model()
